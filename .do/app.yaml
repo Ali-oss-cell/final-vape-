@@ -1,0 +1,16 @@
+name: pnw-smoke-shop
+region: nyc
+static_sites:
+- name: web
+  github:
+    repo: Ali-oss-cell/final-vape-
+    branch: main
+    deploy_on_push: true
+  build_command: npm ci && npm run build
+  output_dir: dist
+  routes:
+  - path: /
+  catchall_document: index.html
+  environment_slug: node-js
+  instance_count: 1
+  instance_size_slug: basic-xxs

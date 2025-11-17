@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
+import logoImage from '../assets/images/logo use.png'
 
 function Header() {
   const location = useLocation()
@@ -8,14 +9,12 @@ function Header() {
       <div className="container">
         <div className="nav-wrapper">
           <Link to="/" className="logo">
-            <div className="logo-icon">
-              <div className="diamond outer"></div>
-              <div className="diamond inner"></div>
-            </div>
+            <img src={logoImage} alt="PNW Smoke Shop Logo" className="logo-image" />
             <span>PNW Smoke Shop</span>
           </Link>
           <nav className="nav">
             <Link to="/vapes" className={location.pathname.includes('vapes') || location.pathname.includes('e-liquids') || location.pathname.includes('glassware') || location.pathname.includes('accessories') ? 'active' : ''}>Products</Link>
+            <Link to="/stores" className={location.pathname === '/stores' ? 'active' : ''}>Stores</Link>
             {location.pathname === '/' ? (
               <>
                 <a href="#story">Our Story</a>
