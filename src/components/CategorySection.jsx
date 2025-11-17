@@ -49,7 +49,7 @@ function CategorySection({ name, path, icon, gradient, align = 'left', image, de
       <div className="category-section-content">
         <h2 className="category-section-title">{name}</h2>
         <p className="category-section-description">{description}</p>
-        <button className="btn btn-primary">Shop Now</button>
+        <button className="btn btn-primary">Check Now</button>
       </div>
     </Link>
   )

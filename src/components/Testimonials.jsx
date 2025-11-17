@@ -41,8 +41,8 @@ function Testimonials() {
     testimonialCardsRef.current.forEach(card => {
       if (card) {
         card.style.opacity = '0'
-        card.style.transform = 'translateY(20px)'
-        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease'
+        card.style.transform = 'translateY(30px)'
+        card.style.transition = 'opacity 0.8s ease, transform 0.8s ease'
         cardObserver.observe(card)
       }
     })
@@ -58,36 +58,59 @@ function Testimonials() {
   const testimonials = [
     {
       quote: "The best selection and most knowledgeable staff in town. PNW Smoke Shop is my go-to for a reason!",
-      author: "Alex J."
+      author: "Alex J.",
+      role: "Regular Customer",
+      gradient: "linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(168, 85, 247, 0.05) 100%)"
     },
     {
       quote: "Incredible customer service. They helped me find the perfect vape and I couldn't be happier with my purchase.",
-      author: "Samantha R."
+      author: "Samantha R.",
+      role: "Vape Enthusiast",
+      gradient: "linear-gradient(135deg, rgba(168, 85, 247, 0.12) 0%, rgba(147, 51, 234, 0.08) 100%)"
     },
     {
       quote: "A truly premium experience from the moment you walk in. The quality of their glassware is second to none.",
-      author: "Mike P."
+      author: "Mike P.",
+      role: "Glass Collector",
+      gradient: "linear-gradient(135deg, rgba(168, 85, 247, 0.1) 0%, rgba(168, 85, 247, 0.03) 100%)"
     }
   ]
 
   return (
     <section id="testimonials" className="testimonials" ref={sectionRef}>
       <div className="container">
-        <h2 className="section-title">What Our Community Says</h2>
+        <div className="testimonials-header">
+          <h2 className="section-title">What Our Community Says</h2>
+          <p className="testimonials-subtitle">Real experiences from real customers who trust us</p>
+        </div>
         <div className="testimonials-grid">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
               className="testimonial-card"
               ref={el => testimonialCardsRef.current[index] = el}
+              style={{ background: testimonial.gradient }}
             >
-              <div className="stars">
-                {[...Array(5)].map((_, i) => (
-                  <i key={i} className="fas fa-star"></i>
-                ))}
+              <div className="testimonial-card-inner">
+                <div className="testimonial-header">
+                  <div className="testimonial-avatar">
+                    <span>{testimonial.author.charAt(0)}</span>
+                  </div>
+                  <div className="testimonial-author-info">
+                    <p className="author">{testimonial.author}</p>
+                    <p className="author-role">{testimonial.role}</p>
+                  </div>
+                </div>
+                <div className="stars">
+                  {[...Array(5)].map((_, i) => (
+                    <i key={i} className="fas fa-star"></i>
+                  ))}
+                </div>
+                <div className="quote-wrapper">
+                  <i className="fas fa-quote-left quote-icon"></i>
+                  <p className="quote">"{testimonial.quote}"</p>
+                </div>
               </div>
-              <p className="quote">"{testimonial.quote}"</p>
-              <p className="author">- {testimonial.author}</p>
             </div>
           ))}
         </div>

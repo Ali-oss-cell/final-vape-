@@ -35,26 +35,23 @@ function Accessories() {
   }, [])
 
   const products = [
-    { id: 1, name: 'Premium Grinder', price: '$29.99', description: 'Multi-chamber grinder with kief catcher' },
-    { id: 2, name: 'Rolling Paper Variety Pack', price: '$12.99', description: 'Assorted papers for every preference' },
-    { id: 3, name: 'Torch Lighter Pro', price: '$24.99', description: 'Professional-grade torch lighter' },
-    { id: 4, name: 'Storage Container Set', price: '$34.99', description: 'Airtight containers for freshness' },
-    { id: 5, name: 'Cleaning Kit Complete', price: '$19.99', description: 'Everything needed for glass maintenance' },
-    { id: 6, name: 'Carrying Case Deluxe', price: '$39.99', description: 'Protective case for your gear' }
+    { id: 1, name: 'Premium Grinder', description: 'Multi-chamber grinder with kief catcher' },
+    { id: 2, name: 'Rolling Paper Variety Pack', description: 'Assorted papers for every preference' },
+    { id: 3, name: 'Torch Lighter Pro', description: 'Professional-grade torch lighter' },
+    { id: 4, name: 'Storage Container Set', description: 'Airtight containers for freshness' },
+    { id: 5, name: 'Cleaning Kit Complete', description: 'Everything needed for glass maintenance' },
+    { id: 6, name: 'Carrying Case Deluxe', description: 'Protective case for your gear' },
+    { id: 7, name: 'Battery Charger Set', description: 'Fast charging solution for all devices' },
+    { id: 8, name: 'Replacement Coils Pack', description: 'High-quality coils for optimal performance' },
+    { id: 9, name: 'Protective Sleeves', description: 'Durable protection for your devices' }
   ]
 
   return (
     <div className="product-page">
-      <section className="product-hero">
+      <section className="products-section vapes-page-section">
         <div className="container">
-          <h1 className="page-title">Accessories</h1>
-          <p className="page-subtitle">Essential accessories to complete your setup</p>
-        </div>
-      </section>
-      
-      <section className="products-section">
-        <div className="container">
-          <div className="products-grid">
+          <h1 className="page-title" style={{ textAlign: 'center', marginBottom: '50px' }}>Accessories</h1>
+          <div className="products-grid vapes-grid">
             {products.map((product, index) => (
               <div
                 key={product.id}
@@ -67,10 +64,6 @@ function Accessories() {
                 <div className="product-info">
                   <h3>{product.name}</h3>
                   <p className="product-description">{product.description}</p>
-                  <div className="product-footer">
-                    <span className="product-price">{product.price}</span>
-                    <button className="btn btn-primary">Add to Cart</button>
-                  </div>
                 </div>
               </div>
             ))}

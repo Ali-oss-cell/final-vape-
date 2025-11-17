@@ -35,26 +35,23 @@ function Glassware() {
   }, [])
 
   const products = [
-    { id: 1, name: 'Premium Glass Bong', price: '$149.99', description: 'Handcrafted glass with percolator system' },
-    { id: 2, name: 'Mini Glass Pipe', price: '$39.99', description: 'Compact and durable glass pipe' },
-    { id: 3, name: 'Rig Set Complete', price: '$199.99', description: 'Complete dab rig with all accessories' },
-    { id: 4, name: 'Sherlock Pipe', price: '$59.99', description: 'Classic design with modern quality' },
-    { id: 5, name: 'Water Pipe Pro', price: '$179.99', description: 'Advanced filtration for smooth hits' },
-    { id: 6, name: 'Desktop Vaporizer', price: '$249.99', description: 'Premium desktop vaporizing experience' }
+    { id: 1, name: 'Premium Glass Bong', description: 'Handcrafted glass with percolator system' },
+    { id: 2, name: 'Mini Glass Pipe', description: 'Compact and durable glass pipe' },
+    { id: 3, name: 'Rig Set Complete', description: 'Complete dab rig with all accessories' },
+    { id: 4, name: 'Sherlock Pipe', description: 'Classic design with modern quality' },
+    { id: 5, name: 'Water Pipe Pro', description: 'Advanced filtration for smooth hits' },
+    { id: 6, name: 'Desktop Vaporizer', description: 'Premium desktop vaporizing experience' },
+    { id: 7, name: 'Artisan Glass Piece', description: 'Unique hand-blown design with intricate details' },
+    { id: 8, name: 'Travel Glass Set', description: 'Portable glassware for on-the-go use' },
+    { id: 9, name: 'Premium Beaker Bong', description: 'Classic beaker design with modern features' }
   ]
 
   return (
     <div className="product-page">
-      <section className="product-hero">
+      <section className="products-section vapes-page-section">
         <div className="container">
-          <h1 className="page-title">Glassware</h1>
-          <p className="page-subtitle">Handcrafted glass pieces for the connoisseur</p>
-        </div>
-      </section>
-      
-      <section className="products-section">
-        <div className="container">
-          <div className="products-grid">
+          <h1 className="page-title" style={{ textAlign: 'center', marginBottom: '50px' }}>Glassware</h1>
+          <div className="products-grid vapes-grid">
             {products.map((product, index) => (
               <div
                 key={product.id}
@@ -67,10 +64,6 @@ function Glassware() {
                 <div className="product-info">
                   <h3>{product.name}</h3>
                   <p className="product-description">{product.description}</p>
-                  <div className="product-footer">
-                    <span className="product-price">{product.price}</span>
-                    <button className="btn btn-primary">Add to Cart</button>
-                  </div>
                 </div>
               </div>
             ))}

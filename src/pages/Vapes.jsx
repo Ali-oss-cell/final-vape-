@@ -35,26 +35,23 @@ function Vapes() {
   }, [])
 
   const products = [
-    { id: 1, name: 'Premium Vape Pro X', price: '$89.99', description: 'Advanced temperature control and long-lasting battery' },
-    { id: 2, name: 'Compact Vape Mini', price: '$49.99', description: 'Perfect for on-the-go with sleek design' },
-    { id: 3, name: 'Elite Vape Max', price: '$129.99', description: 'Premium build quality with customizable settings' },
-    { id: 4, name: 'Starter Vape Kit', price: '$34.99', description: 'Everything you need to get started' },
-    { id: 5, name: 'Disposable Vape Pack', price: '$24.99', description: 'Convenient single-use option' },
-    { id: 6, name: 'Pro Mod Vape', price: '$159.99', description: 'For the serious vaper with advanced features' }
+    { id: 1, name: 'Premium Vape Pro X', description: 'Advanced temperature control and long-lasting battery' },
+    { id: 2, name: 'Compact Vape Mini', description: 'Perfect for on-the-go with sleek design' },
+    { id: 3, name: 'Elite Vape Max', description: 'Premium build quality with customizable settings' },
+    { id: 4, name: 'Starter Vape Kit', description: 'Everything you need to get started' },
+    { id: 5, name: 'Disposable Vape Pack', description: 'Convenient single-use option' },
+    { id: 6, name: 'Pro Mod Vape', description: 'For the serious vaper with advanced features' },
+    { id: 7, name: 'Ultra Vape Deluxe', description: 'Top-tier performance with premium materials' },
+    { id: 8, name: 'Travel Vape Compact', description: 'Lightweight and portable design' },
+    { id: 9, name: 'Classic Vape Edition', description: 'Timeless design meets modern technology' }
   ]
 
   return (
     <div className="product-page">
-      <section className="product-hero">
+      <section className="products-section vapes-page-section">
         <div className="container">
-          <h1 className="page-title">Vapes</h1>
-          <p className="page-subtitle">Discover our premium collection of vapes and vaporizers</p>
-        </div>
-      </section>
-      
-      <section className="products-section">
-        <div className="container">
-          <div className="products-grid">
+          <h1 className="page-title" style={{ textAlign: 'center', marginBottom: '50px' }}>Vapes</h1>
+          <div className="products-grid vapes-grid">
             {products.map((product, index) => (
               <div
                 key={product.id}
@@ -67,10 +64,6 @@ function Vapes() {
                 <div className="product-info">
                   <h3>{product.name}</h3>
                   <p className="product-description">{product.description}</p>
-                  <div className="product-footer">
-                    <span className="product-price">{product.price}</span>
-                    <button className="btn btn-primary">Add to Cart</button>
-                  </div>
                 </div>
               </div>
             ))}

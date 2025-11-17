@@ -18,9 +18,8 @@ function Footer() {
             <p>© 2024 PNW Smoke Shop. All Rights Reserved.</p>
           </div>
           <div className="footer-social">
-            <a href="#" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
-            <a href="#" aria-label="YouTube"><i className="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61580906322259" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/smo.ke4less/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
           </div>
         </div>
       </div>

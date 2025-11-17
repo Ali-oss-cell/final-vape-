@@ -16,7 +16,6 @@ function Header() {
           </Link>
           <nav className="nav">
             <Link to="/vapes" className={location.pathname.includes('vapes') || location.pathname.includes('e-liquids') || location.pathname.includes('glassware') || location.pathname.includes('accessories') ? 'active' : ''}>Products</Link>
-            <Link to="/stores" className={location.pathname === '/stores' ? 'active' : ''}>Stores</Link>
             {location.pathname === '/' ? (
               <>
                 <a href="#story">Our Story</a>
@@ -31,7 +30,6 @@ function Header() {
               </>
             )}
           </nav>
-          <button className="btn btn-primary">Shop Now</button>
         </div>
       </div>
     </header>
