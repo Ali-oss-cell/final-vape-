@@ -1476,3 +1476,65 @@ body {
         width: 100%;
     }
 }
+
+
+.age-gate-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 20px;
+}
+
+.age-gate-modal {
+    background: rgba(26, 26, 26, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 520px;
+    text-align: center;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+.age-gate-modal h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.age-gate-modal p {
+    color: var(--text-gray);
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.age-gate-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.btn.btn-secondary {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: var(--text-white);
+}
+
+.btn.btn-secondary:hover {
+    border-color: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.age-gate-modal small {
+    display: block;
+    color: var(--text-gray);
+    opacity: 0.8;
+}

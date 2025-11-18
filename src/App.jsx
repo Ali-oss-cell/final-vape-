@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import AnimatedBackground from './components/AnimatedBackground'
+import AgeGate from './components/AgeGate'
 import Home from './pages/Home'
 import Vapes from './pages/Vapes'
 import ELiquids from './pages/ELiquids'
@@ -14,6 +15,7 @@ function App() {
     <Router>
       <div className="App">
         <AnimatedBackground />
+        <AgeGate />
         <div style={{ position: 'relative', zIndex: 1 }}>
           <Header />
           <Routes>
