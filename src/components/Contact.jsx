@@ -1,18 +1,12 @@
-import { useState, useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 
 function Contact() {
   const sectionRef = useRef(null)
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  })
 
   useEffect(() => {
     const section = sectionRef.current
     if (!section) return
 
-    // Section scroll animation
     const sectionObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -21,7 +15,6 @@ function Contact() {
       })
     }, { threshold: 0.2 })
 
-    // Set initial state - section starts hidden
     section.style.opacity = '0'
     section.style.transform = 'translateY(80px)'
     section.style.transition = 'opacity 1s ease, transform 1s ease'
@@ -32,79 +25,111 @@ function Contact() {
     }
   }, [])
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    if (formData.name && formData.email && formData.message) {
-      alert('Thank you for your message! We\'ll get back to you soon.')
-      setFormData({ name: '', email: '', message: '' })
-    } else {
-      alert('Please fill in all fields.')
+  const instagramPosts = [
+    {
+      id: 1,
+      image: 'https://via.placeholder.com/600x600/0f0f0f/ffffff?text=PNW+Drop',
+      likes: 234,
+      comments: 12,
+      caption: 'New arrivals just dropped! 🔥'
+    },
+    {
+      id: 2,
+      image: 'https://via.placeholder.com/600x600/120212/ffffff?text=Store+Vibes',
+      likes: 189,
+      comments: 8,
+      caption: 'Store vibes ✨'
+    },
+    {
+      id: 3,
+      image: 'https://via.placeholder.com/600x600/1a1a1a/ffffff?text=Premium+Glass',
+      likes: 312,
+      comments: 15,
+      caption: 'Premium selection available now'
+    },
+    {
+      id: 4,
+      image: 'https://via.placeholder.com/600x600/2a0f2e/ffffff?text=Visit+Us',
+      likes: 156,
+      comments: 6,
+      caption: 'Visit us in-store today!'
+    },
+    {
+      id: 5,
+      image: 'https://via.placeholder.com/600x600/111010/ffffff?text=Limited+Drop',
+      likes: 278,
+      comments: 20,
+      caption: 'Limited drop—don\'t miss it 🔥'
+    },
+    {
+      id: 6,
+      image: 'https://via.placeholder.com/600x600/1b0f26/ffffff?text=Glass+Art',
+      likes: 201,
+      comments: 9,
+      caption: 'Quality you can trust'
     }
-  }
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
+  ]
 
   return (
-    <section id="contact" className="contact" ref={sectionRef}>
+    <section id="contact" className="contact instagram-section" ref={sectionRef}>
       <div className="container">
-        <div className="contact-content">
-          <div className="contact-info">
-            <h2 className="section-title">Get in Touch</h2>
-            <p>Have a question or need some advice? Drop us a line or visit us in-store. We're always here to help.</p>
-            <div className="contact-details">
-              <div className="contact-item">
-                <i className="fas fa-map-marker-alt"></i>
-                <span>123 Pine Street, Seattle, WA 98101</span>
+        <div className="instagram-header">
+          <h2 className="section-title">Follow Our Journey</h2>
+          <p>See our latest products, store updates, and community highlights on Instagram</p>
+          <a
+            href="https://www.instagram.com/pnwsmokeshop"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary instagram-follow-btn"
+          >
+            <i className="fab fa-instagram"></i>
+            Follow Us @PNWSmokeShop
+          </a>
+        </div>
+
+        <div className="instagram-feed">
+          {instagramPosts.map((post) => (
+            <div key={post.id} className="instagram-post">
+              <div className="instagram-post-image">
+                <img src={post.image} alt={post.caption} loading="lazy" />
+                <div className="instagram-post-overlay">
+                  <div className="instagram-stats">
+                    <span><i className="fas fa-heart"></i> {post.likes}</span>
+                    <span><i className="fas fa-comment"></i> {post.comments}</span>
+                  </div>
+                </div>
               </div>
-              <div className="contact-item">
-                <i className="fas fa-clock"></i>
-                <span>Mon - Sun: 10:00 AM - 9:00 PM</span>
-              </div>
-              <div className="contact-item">
-                <i className="fas fa-envelope"></i>
-                <span>hello@pnwsmokeshop.com</span>
+              <div className="instagram-post-caption">
+                <p>{post.caption}</p>
               </div>
             </div>
-            <div className="map-container">
-              <div className="map-placeholder">
-                <i className="fas fa-map-marked-alt"></i>
-                <p>Map Location</p>
-              </div>
+          ))}
+        </div>
+
+        <div className="instagram-cta">
+          <div className="instagram-cta-content">
+            <h3>Stay Connected</h3>
+            <p>Follow us for daily updates, new arrivals, and exclusive deals</p>
+            <div className="social-links">
+              <a
+                href="https://www.instagram.com/pnwsmokeshop"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link instagram"
+              >
+                <i className="fab fa-instagram"></i>
+                <span>Instagram</span>
+              </a>
+              <a
+                href="https://www.facebook.com/pnwsmokeshop"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link facebook"
+              >
+                <i className="fab fa-facebook"></i>
+                <span>Facebook</span>
+              </a>
             </div>
-          </div>
-          <div className="contact-form-wrapper">
-            <form className="contact-form" onSubmit={handleSubmit}>
-              <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="you@example.com"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-              <textarea
-                name="message"
-                placeholder="How can we help?"
-                rows="6"
-                value={formData.message}
-                onChange={handleChange}
-                required
-              ></textarea>
-              <button type="submit" className="btn btn-primary btn-large">Submit Message</button>
-            </form>
           </div>
         </div>
       </div>

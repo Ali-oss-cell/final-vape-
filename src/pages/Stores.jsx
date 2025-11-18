@@ -106,17 +106,17 @@ function Stores() {
       lng: -122.625,
       image: smoke4lessImage
     },
-    { 
-      id: 4, 
-      name: 'Smoking Joe', 
-      address: '11215 NE 28th St', 
-      city: 'Vancouver, WA 98684', 
-      phone: 'Call for hours', 
-      hours: 'Mon-Sat: 10AM-9PM, Sun: 11AM-7PM', 
-      lat: 45.6397, 
-      lng: -122.5553,
-      image: null // Add image path here when available
-    }
+    // { 
+    //   id: 4, 
+    //   name: 'Smoking Joe', 
+    //   address: '11215 NE 28th St', 
+    //   city: 'Vancouver, WA 98684', 
+    //   phone: 'Call for hours', 
+    //   hours: 'Mon-Sat: 10AM-9PM, Sun: 11AM-7PM', 
+    //   lat: 45.6397, 
+    //   lng: -122.5553,
+    //   image: null // Add image path here when available
+    // }
   ]
 
   const handleStoreClick = (store, openPopup = true) => {
