@@ -45,13 +45,11 @@ function Header() {
             </Link>
             {location.pathname === '/' ? (
               <>
-                <a href="#story" onClick={handleNavClick}>Our Story</a>
                 <a href="#testimonials" onClick={handleNavClick}>Testimonials</a>
                 <a href="#contact" onClick={handleNavClick}>Contact</a>
               </>
             ) : (
               <>
-                <Link to="/#story" onClick={handleNavClick}>Our Story</Link>
                 <Link to="/#testimonials" onClick={handleNavClick}>Testimonials</Link>
                 <Link to="/#contact" onClick={handleNavClick}>Contact</Link>
               </>

@@ -902,6 +902,9 @@ body {
 }
 
 .instagram-post {
+    display: block;
+    text-decoration: none;
+    color: inherit;
     background: rgba(26, 26, 26, 0.45);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);

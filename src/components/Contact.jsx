@@ -1,4 +1,8 @@
 import { useEffect, useRef } from 'react'
+// To use local images, import them like this:
+// import instagramImage1 from '../assets/images/your-image-1.jpg'
+// import instagramImage2 from '../assets/images/your-image-2.jpg'
+// Then use: image: instagramImage1
 
 function Contact() {
   const sectionRef = useRef(null)
@@ -28,44 +32,42 @@ function Contact() {
   const instagramPosts = [
     {
       id: 1,
-      image: 'https://via.placeholder.com/600x600/0f0f0f/ffffff?text=PNW+Drop',
-      likes: 234,
-      comments: 12,
-      caption: 'New arrivals just dropped! 🔥'
-    },
-    {
-      id: 2,
-      image: 'https://via.placeholder.com/600x600/120212/ffffff?text=Store+Vibes',
-      likes: 189,
-      comments: 8,
+      image: 'https://www.instagram.com/p/DQ_MuocjanG/media/?size=l',
+      postUrl: 'https://www.instagram.com/p/DQ_MuocjanG/',
+      likes: 0, // Update with actual likes
+      comments: 0, // Update with actual comments
       caption: 'Store vibes ✨'
     },
     {
-      id: 3,
-      image: 'https://via.placeholder.com/600x600/1a1a1a/ffffff?text=Premium+Glass',
-      likes: 312,
-      comments: 15,
+      id: 2,
+      image: 'https://www.instagram.com/p/DQ5TF6miQeV/media/?size=l',
+      postUrl: 'https://www.instagram.com/p/DQ5TF6miQeV/',
+      likes: 0, // Update with actual likes
+      comments: 0, // Update with actual comments
       caption: 'Premium selection available now'
     },
     {
-      id: 4,
-      image: 'https://via.placeholder.com/600x600/2a0f2e/ffffff?text=Visit+Us',
-      likes: 156,
-      comments: 6,
+      id: 3,
+      image: 'https://www.instagram.com/p/DQ5TDbAjfht/media/?size=l',
+      postUrl: 'https://www.instagram.com/p/DQ5TDbAjfht/',
+      likes: 0, // Update with actual likes
+      comments: 0, // Update with actual comments
       caption: 'Visit us in-store today!'
     },
     {
-      id: 5,
-      image: 'https://via.placeholder.com/600x600/111010/ffffff?text=Limited+Drop',
-      likes: 278,
-      comments: 20,
-      caption: 'Limited drop—don\'t miss it 🔥'
+      id: 4,
+      image: 'https://www.instagram.com/p/DQ1ZNwQAUFk/media/?size=l',
+      postUrl: 'https://www.instagram.com/p/DQ1ZNwQAUFk/',
+      likes: 0, // Update with actual likes
+      comments: 0, // Update with actual comments
+      caption: 'New arrivals! 🔥'
     },
     {
-      id: 6,
-      image: 'https://via.placeholder.com/600x600/1b0f26/ffffff?text=Glass+Art',
-      likes: 201,
-      comments: 9,
+      id: 5,
+      image: 'https://www.instagram.com/p/DQZ1N1UghrT/media/?size=l',
+      postUrl: 'https://www.instagram.com/p/DQZ1N1UghrT/',
+      likes: 0, // Update with actual likes
+      comments: 0, // Update with actual comments
       caption: 'Quality you can trust'
     }
   ]
@@ -77,21 +79,36 @@ function Contact() {
           <h2 className="section-title">Follow Our Journey</h2>
           <p>See our latest products, store updates, and community highlights on Instagram</p>
           <a
-            href="https://www.instagram.com/pnwsmokeshop"
+            href="https://www.instagram.com/smo.ke4less/"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary instagram-follow-btn"
           >
             <i className="fab fa-instagram"></i>
-            Follow Us @PNWSmokeShop
+            Follow Us @smo.ke4less
           </a>
         </div>
 
         <div className="instagram-feed">
           {instagramPosts.map((post) => (
-            <div key={post.id} className="instagram-post">
+            <a
+              key={post.id}
+              href={post.postUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="instagram-post"
+            >
               <div className="instagram-post-image">
-                <img src={post.image} alt={post.caption} loading="lazy" />
+                <img 
+                  src={post.image} 
+                  alt={post.caption} 
+                  loading="lazy"
+                  onError={(e) => {
+                    // Fallback if image fails to load
+                    e.target.style.display = 'none'
+                    e.target.parentElement.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #888; font-size: 14px;">Image not available</div>'
+                  }}
+                />
                 <div className="instagram-post-overlay">
                   <div className="instagram-stats">
                     <span><i className="fas fa-heart"></i> {post.likes}</span>
@@ -102,7 +119,7 @@ function Contact() {
               <div className="instagram-post-caption">
                 <p>{post.caption}</p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
@@ -112,7 +129,7 @@ function Contact() {
             <p>Follow us for daily updates, new arrivals, and exclusive deals</p>
             <div className="social-links">
               <a
-                href="https://www.instagram.com/pnwsmokeshop"
+                href="https://www.instagram.com/smo.ke4less/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link instagram"
