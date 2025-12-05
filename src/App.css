@@ -1344,11 +1344,11 @@ body {
 
 .vapes-page-section {
     padding: 60px 0;
-    min-height: calc(100vh - 80px);
+    min-height: auto;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    overflow-y: auto;
+    overflow: visible;
 }
 
 .products-grid {

@@ -50,21 +50,21 @@ function Vapes() {
   }, [])
 
   const products = [
-    { id: 1, name: 'Premium Vape Pro X', description: 'Advanced temperature control and long-lasting battery', image: vape1 },
-    { id: 2, name: 'Compact Vape Mini', description: 'Perfect for on-the-go with sleek design', image: vape2 },
-    { id: 3, name: 'Elite Vape Max', description: 'Premium build quality with customizable settings', image: vape3 },
-    { id: 4, name: 'Starter Vape Kit', description: 'Everything you need to get started', image: vape4 },
-    { id: 5, name: 'Disposable Vape Pack', description: 'Convenient single-use option', image: vape5 },
-    { id: 6, name: 'Pro Mod Vape', description: 'For the serious vaper with advanced features', image: vape6 },
-    { id: 7, name: 'Ultra Vape Deluxe', description: 'Top-tier performance with premium materials', image: vape7 },
-    { id: 8, name: 'Travel Vape Compact', description: 'Lightweight and portable design', image: vape8 },
-    { id: 9, name: 'Classic Vape Edition', description: 'Timeless design meets modern technology', image: vape9 },
-    { id: 10, name: 'Premium Disposable Vape', description: 'High-quality disposable option', image: vape10 },
-    { id: 11, name: 'Advanced Vape System', description: 'Cutting-edge technology and design', image: vape11 },
-    { id: 12, name: 'Sleek Vape Design', description: 'Modern aesthetics meet functionality', image: vape12 },
-    { id: 13, name: 'Professional Vape Mod', description: 'For enthusiasts seeking perfection', image: vape13 },
-    { id: 14, name: 'Compact Disposable', description: 'Portable and convenient', image: vape14 },
-    { id: 15, name: 'Elite Vape Collection', description: 'Premium selection for discerning vapers', image: vape15 }
+    { id: 1, name: 'Leo 2 Edition', description: 'Premium disposable vape with exceptional flavor', image: vape1 },
+    { id: 2, name: 'Geek Bar', description: 'Popular disposable vape with great taste', image: vape2 },
+    { id: 3, name: 'Lost Mary', description: 'Sleek design with smooth vaping experience', image: vape3 },
+    { id: 4, name: 'Geek Bar', description: 'Popular disposable vape with great taste', image: vape4 },
+    { id: 5, name: 'Suonon', description: 'Quality disposable vape option', image: vape5 },
+    { id: 6, name: 'Off Stamp', description: 'Premium disposable vape', image: vape6 },
+    { id: 7, name: 'Melso', description: 'Reliable disposable vape choice', image: vape7 },
+    { id: 8, name: 'Off Stamp', description: 'Premium disposable vape', image: vape8 },
+    { id: 9, name: 'Raz', description: 'Compact and convenient disposable vape', image: vape9 },
+    { id: 10, name: 'Off Stamp', description: 'Premium disposable vape', image: vape10 },
+    { id: 11, name: 'Melso', description: 'Reliable disposable vape choice', image: vape11 },
+    { id: 12, name: 'Off Stamp', description: 'Premium disposable vape', image: vape12 },
+    { id: 13, name: 'Nexa', description: 'Modern disposable vape design', image: vape13 },
+    { id: 14, name: 'Melso', description: 'Reliable disposable vape choice', image: vape14 },
+    { id: 15, name: 'Raz', description: 'Compact and convenient disposable vape', image: vape15 }
   ]
 
   return (
