@@ -7,10 +7,6 @@ function Footer() {
         <div className="footer-content">
           <div className="footer-logo">
             <Link to="/" className="logo">
-              <div className="logo-icon">
-                <div className="diamond outer"></div>
-                <div className="diamond inner"></div>
-              </div>
               <span>PNW Smoke Shop</span>
             </Link>
           </div>
