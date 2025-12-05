@@ -5,6 +5,7 @@ import 'leaflet/dist/leaflet.css'
 import smoke4lessImage from '../assets/images/smoke4less.png'
 import smoke4less2Image from '../assets/images/smoke4less 2.png'
 import patImage from '../assets/images/pat.png'
+import smokingJoeImage from '../assets/images/smokingjoe.png'
 
 // Fix for default marker icon in React-Leaflet
 delete L.Icon.Default.prototype._getIconUrl
@@ -106,17 +107,17 @@ function Stores() {
       lng: -122.625,
       image: smoke4lessImage
     },
-    // { 
-    //   id: 4, 
-    //   name: 'Smoking Joe', 
-    //   address: '11215 NE 28th St', 
-    //   city: 'Vancouver, WA 98684', 
-    //   phone: 'Call for hours', 
-    //   hours: 'Mon-Sat: 10AM-9PM, Sun: 11AM-7PM', 
-    //   lat: 45.6397, 
-    //   lng: -122.5553,
-    //   image: null // Add image path here when available
-    // }
+    { 
+      id: 4, 
+      name: 'Smoking Joe', 
+      address: '11215 NE 28th St', 
+      city: 'Vancouver, WA 98684', 
+      phone: 'Call for hours', 
+      hours: 'Mon-Sat: 10AM-9PM, Sun: 11AM-7PM', 
+      lat: 45.6397, 
+      lng: -122.5553,
+      image: smokingJoeImage
+    }
   ]
 
   const handleStoreClick = (store, openPopup = true) => {
