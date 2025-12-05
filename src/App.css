@@ -1410,6 +1410,43 @@ body {
     padding: 25px;
 }
 
+/* Coming Soon Section */
+.coming-soon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.coming-soon-icon {
+    font-size: 120px;
+    margin-bottom: 40px;
+    animation: floatIcon 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 30px rgba(168, 85, 247, 0.5));
+}
+
+.coming-soon-title {
+    font-size: 64px;
+    font-weight: 700;
+    color: var(--accent-teal);
+    margin: 30px 0;
+    letter-spacing: -0.02em;
+    text-shadow: 0 0 30px rgba(168, 85, 247, 0.5);
+}
+
+.coming-soon-message {
+    font-size: 22px;
+    color: var(--text-gray);
+    max-width: 600px;
+    line-height: 1.8;
+    margin-top: 20px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
 .product-info h3 {
     font-size: 24px;
     margin-bottom: 12px;
@@ -1688,6 +1725,21 @@ body {
 
     .product-footer .btn {
         width: 100%;
+    }
+
+    .coming-soon-icon {
+        font-size: 80px;
+        margin-bottom: 30px;
+    }
+
+    .coming-soon-title {
+        font-size: 40px;
+        margin: 20px 0;
+    }
+
+    .coming-soon-message {
+        font-size: 18px;
+        padding: 0 20px;
     }
 }
 
