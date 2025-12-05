@@ -41,6 +41,18 @@ body {
     flex-direction: column;
 }
 
+.app-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+.app-content > main {
+    flex: 1 0 auto;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -1057,6 +1069,7 @@ body {
     position: relative;
     width: 100%;
     margin-top: auto;
+    flex-shrink: 0;
     z-index: 10;
 }
 
@@ -1306,7 +1319,7 @@ body {
 
 /* Product Pages */
 .product-page {
-    min-height: 100vh;
+    min-height: auto;
     background-color: transparent;
     position: relative;
 }

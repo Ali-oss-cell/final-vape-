@@ -16,9 +16,9 @@ function App() {
       <div className="App">
         <AnimatedBackground />
         <AgeGate />
-        <div className="app-content" style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+        <div className="app-content">
           <Header />
-          <main style={{ flex: 1 }}>
+          <main>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/vapes" element={<Vapes />} />
