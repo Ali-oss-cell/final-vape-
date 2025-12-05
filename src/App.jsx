@@ -16,16 +16,18 @@ function App() {
       <div className="App">
         <AnimatedBackground />
         <AgeGate />
-        <div style={{ position: 'relative', zIndex: 1 }}>
+        <div className="app-content" style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
           <Header />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/vapes" element={<Vapes />} />
-            <Route path="/e-liquids" element={<ELiquids />} />
-            <Route path="/glassware" element={<Glassware />} />
-            <Route path="/accessories" element={<Accessories />} />
-            <Route path="/stores" element={<Stores />} />
-          </Routes>
+          <main style={{ flex: 1 }}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/vapes" element={<Vapes />} />
+              <Route path="/e-liquids" element={<ELiquids />} />
+              <Route path="/glassware" element={<Glassware />} />
+              <Route path="/accessories" element={<Accessories />} />
+              <Route path="/stores" element={<Stores />} />
+            </Routes>
+          </main>
           <Footer />
         </div>
       </div>
